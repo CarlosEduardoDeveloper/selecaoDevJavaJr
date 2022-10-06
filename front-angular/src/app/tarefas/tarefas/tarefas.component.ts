@@ -52,8 +52,8 @@ export class TarefasComponent implements OnInit {
   }
 
 
-  onEdit(){
-
+  onEdit(element: Tarefas){
+    this.router.navigate(['editar', element.id], {relativeTo: this.route});
   }
 
   private buildForm(): FormGroup {

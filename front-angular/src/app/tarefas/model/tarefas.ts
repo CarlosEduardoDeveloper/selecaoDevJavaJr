@@ -1,5 +1,5 @@
 export interface Tarefas {
-  id: number;
+  id: string;
   descricao: string;
   atividadeConcluida: string;
 

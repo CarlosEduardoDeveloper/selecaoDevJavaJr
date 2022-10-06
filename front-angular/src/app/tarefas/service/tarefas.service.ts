@@ -23,7 +23,13 @@ private readonly APIPOST = 'gerenciador/salvar';
     );
   }
 
+  buscaPorId(id: string){
+    return this.httpClient.get<Tarefas>(`${this.API}/${id}`);
+  }
+
   salvar(tarefa: Tarefas){
     return this.httpClient.post<Tarefas>(this.APIPOST, tarefa).pipe(first());
   }
+
+
 }

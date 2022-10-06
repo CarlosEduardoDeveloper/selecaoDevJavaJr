@@ -27,7 +27,7 @@
 
         <mat-cell *matCellDef="let element">
           <button mat-icon-button color="primary" aria-label="Editar uma tarefa">
-            <mat-icon>edit</mat-icon>
+            <mat-icon (click)="onEdit(element)">edit</mat-icon>
           </button>
 
           <button mat-icon-button color="warn" aria-label="Remover uma tarefa">

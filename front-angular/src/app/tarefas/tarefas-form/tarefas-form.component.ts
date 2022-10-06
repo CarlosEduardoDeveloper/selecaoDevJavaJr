@@ -2,6 +2,8 @@ import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { ActivatedRoute } from '@angular/router';
+import { Tarefas } from '../model/tarefas';
 import { TarefasService } from '../service/tarefas.service';
 
 @Component({
@@ -16,14 +18,23 @@ form: FormGroup;
   constructor(private formBuilder: FormBuilder,
     private service: TarefasService,
     private snackBar: MatSnackBar,
-    private location: Location) {
+    private location: Location,
+    private route: ActivatedRoute) {
     this.form = this.formBuilder.group({
-      descricao: [null],
-      atividadeConcluida: [null]
+      id: [''],
+      descricao: [''],
+      atividadeConcluida: ['']
     })
   }
 
   ngOnInit(): void {
+    const tarefas : Tarefas = this.route.snapshot.data['tarefas'];
+    this.form.setValue({
+      id: tarefas.id,
+      descricao: tarefas.descricao,
+      atividadeConcluida: tarefas.atividadeConcluida
+    })
+    console.log(tarefas);
   }
 
   onSubmit(){

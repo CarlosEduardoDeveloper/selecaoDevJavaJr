@@ -19,6 +19,6 @@ resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<T
     if(route.params && route.params['id']){
       return this.service.buscaPorId(route.params['id']);
     }
-    return of({id: '', descricao: '', atividadeConcluida: ''});
+    return of({id: '', descricao: '', flag: ''});
   }
 }

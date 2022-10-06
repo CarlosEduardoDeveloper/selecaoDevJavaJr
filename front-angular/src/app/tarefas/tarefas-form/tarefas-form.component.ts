@@ -23,7 +23,7 @@ form: FormGroup;
     this.form = this.formBuilder.group({
       id: [''],
       descricao: [''],
-      atividadeConcluida: ['']
+      flag: ['']
     })
   }
 
@@ -32,7 +32,7 @@ form: FormGroup;
     this.form.setValue({
       id: tarefas.id,
       descricao: tarefas.descricao,
-      atividadeConcluida: tarefas.atividadeConcluida
+      flag: tarefas.flag
     })
     console.log(tarefas);
   }

@@ -16,8 +16,8 @@ public class Tarefa {
 	@Column(name = "desc_atividade")
 	private String descricao;
 	
-	@Column(name = "atividade_concluida")
-	private String atividadeConcluida;
+	@Column(name = "flag_concluida")
+	private String flag;
 	
 	public Tarefa() {
 		
@@ -39,13 +39,14 @@ public class Tarefa {
 		this.descricao = descricao;
 	}
 
-	public String getAtividadeConcluida() {
-		return atividadeConcluida;
+	public String getFlag() {
+		return flag;
 	}
 
-	public void setAtividadeConcluida(String atividadeConcluida) {
-		this.atividadeConcluida = atividadeConcluida;
+	public void setFlag(String flag) {
+		this.flag = flag;
 	}
+
 	
 	
 }

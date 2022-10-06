@@ -5,15 +5,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import {MatCardModule} from '@angular/material/card';
-
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 import { AppMaterialModule } from './../shared/app-material/app-material.module';
 import { SharedModule } from './../shared/shared.module';
 import { TarefasRoutingModule } from './tarefas-routing.module';
 import { TarefasComponent } from './tarefas/tarefas.component';
 import { TarefasFormComponent } from './tarefas-form/tarefas-form.component';
-
-
 
 @NgModule({
   declarations: [
@@ -29,7 +27,8 @@ import { TarefasFormComponent } from './tarefas-form/tarefas-form.component';
     MatFormFieldModule,
     SharedModule,
     ReactiveFormsModule,
-    MatCardModule
+    MatCardModule,
+    MatTooltipModule
   ]
 })
 export class TarefasModule { }

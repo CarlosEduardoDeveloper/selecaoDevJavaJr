@@ -18,7 +18,7 @@ export class TarefasComponent implements OnInit {
 
   formGroup!: FormGroup;
   listaDeTarefas$: Observable<Tarefas[]>;
-  displayedColumns = ['id', 'descricao', 'atividadeConcluida', 'acoes'];
+  displayedColumns = ['id', 'descricao', 'flag', 'acoes'];
 
   constructor(
     private formBuilder: FormBuilder,
@@ -68,7 +68,7 @@ export class TarefasComponent implements OnInit {
     return this.formGroup = this.formBuilder.group({
       id: [null],
       descricao: [null],
-      atividadeConcluida: [null]
+      flag: [null]
     });
   }
 

@@ -1,6 +1,6 @@
 <mat-card>
 
-  <mat-toolbar color="primary"> Detalhas de Atividades </mat-toolbar>
+  <mat-toolbar color="primary"> Detalhes de Atividades </mat-toolbar>
   <mat-card-content>
     <form [formGroup]="form">
       <mat-form-field class="full-width">
@@ -9,9 +9,9 @@
 
       <mat-form-field class="full-width">
         <mat-label>Atividade já realizada?</mat-label>
-        <mat-select formControlName="atividadeConcluida">
-          <mat-option value="sim">Sim</mat-option>
-          <mat-option value="não">Não</mat-option>
+        <mat-select formControlName="flag">
+          <mat-option value="Sim">Sim</mat-option>
+          <mat-option value="Não">Não</mat-option>
         </mat-select>
       </mat-form-field>
     </form>

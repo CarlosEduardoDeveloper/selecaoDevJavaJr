@@ -1,7 +1,6 @@
 package com.br.boavista.gerenciador.controller;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -49,9 +48,9 @@ public class TarefaController {
 		return tarefaRepository.save(tarefa);
 	}
 	
-	@DeleteMapping(value = "excluir")
+	@DeleteMapping("/excluir/{id}")
 	@ResponseBody
-	public ResponseEntity<String> excluir(@RequestParam Long id) {
+	public ResponseEntity<String> excluir(@PathVariable Long id) {
 		tarefaService.deletarAtividades(id);
 		return new ResponseEntity<String>("User deletado com sucesso", HttpStatus.OK);
 	}

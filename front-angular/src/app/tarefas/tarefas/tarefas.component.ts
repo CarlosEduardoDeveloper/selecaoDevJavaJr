@@ -1,13 +1,12 @@
-import { ErrorDialogComponent } from './../../shared/components/error-dialog/error-dialog.component';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
+import { ActivatedRoute, Router } from '@angular/router';
 import { catchError, Observable, of } from 'rxjs';
 
+import { ErrorDialogComponent } from './../../shared/components/error-dialog/error-dialog.component';
 import { Tarefas } from './../model/tarefas';
 import { TarefasService } from './../service/tarefas.service';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
-import { MatCardModule } from '@angular/material/card';
 
 
 @Component({
@@ -54,6 +53,15 @@ export class TarefasComponent implements OnInit {
 
   onEdit(element: Tarefas){
     this.router.navigate(['editar', element.id], {relativeTo: this.route});
+  }
+
+  onDelete(id: string){
+    this.tarefasService.deletar(id).subscribe(
+      data => {
+        console.log(data);
+      }
+    )
+    location.reload();
   }
 
   private buildForm(): FormGroup {

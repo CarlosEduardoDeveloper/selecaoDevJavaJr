@@ -52,6 +52,10 @@ export class TarefasComponent implements OnInit {
   }
 
 
+  onEdit(){
+
+  }
+
   private buildForm(): FormGroup {
     return this.formGroup = this.formBuilder.group({
       id: [null],

@@ -36,8 +36,8 @@ public class TarefaController {
 	}
 	
 	@PostMapping(value = "salvar")
-	public Tarefa criar(@RequestBody Tarefa t) {
-		return tarefaRepository.save(t);
+	public Tarefa criar(@RequestBody Tarefa tarefa) {
+		return tarefaRepository.save(tarefa);
 	}
 	
 	@DeleteMapping(value = "excluir")

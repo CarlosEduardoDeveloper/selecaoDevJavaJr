@@ -17,7 +17,7 @@ public class Tarefa {
 	private String descricao;
 	
 	@Column(name = "atividade_concluida")
-	private Boolean atividadeConcluida;
+	private String atividadeConcluida;
 	
 	public Tarefa() {
 		
@@ -39,11 +39,11 @@ public class Tarefa {
 		this.descricao = descricao;
 	}
 
-	public Boolean getAtividadeConcluida() {
+	public String getAtividadeConcluida() {
 		return atividadeConcluida;
 	}
 
-	public void setAtividadeConcluida(Boolean atividadeConcluida) {
+	public void setAtividadeConcluida(String atividadeConcluida) {
 		this.atividadeConcluida = atividadeConcluida;
 	}
 	

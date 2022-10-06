@@ -8,7 +8,7 @@ public class TarefaForm {
 	
 	private String descricao;
 	
-	private Boolean atividadeConcluida = true;
+	private String atividadeConcluida;
 	
 	public Tarefa toModel() {
 		Tarefa gerenciamento = new Tarefa();
